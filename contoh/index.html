@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Video</title>
+    <style>
+        body{
+            background-color: rgb(255, 127, 234);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <a href="Index.html" tabindex="-1">Beranda</a>
+        <a href="foto.html" tabindex="-1">Foto</a>
+        <a href="suara.html" tabindex="-1">Suara</a>
+    </div>
+    <div style="text-align:center">
+        <h1>Video Ruspiyadi</h1>
+        <button onclick="tekanPause()">Play/Pause</button>
+        <button onclick="menjadiBig()">Big</button>
+        <button onclick="menjadiSmall()">Small</button>
+        <button onclick="menjadiNormal()">Normal</button>
+        <br><br>
+        <video id="videoku" width="430">
+        <source src="engine.mp4" type="video/mp4">
+        Browser anda tidak support video HTML 5.
+    </video>
+</div>
+            <script>
+            var VideoAku = document.getElementById("videoku");
+            function tekanPause() {
+            if (VideoAku.paused)
+            VideoAku.play();
+            else
+            VideoAku.pause();
+            }
+            function menjadiBig() {
+            VideoAku.width = 560;
+            }
+            function menjadiSmall() {
+            VideoAku.width = 320;
+            }
+            function menjadiNormal() {
+            VideoAku.width = 430;
+            }
+            </script><br>
+            <div style="text-align:center">
+            <h1>Video Online Ruspiyadi</h1>
+            <iframe width="420" height="315"
+            src="engine.mp4">
+            </iframe>
+            </div>
+
+</body>
+</html>
